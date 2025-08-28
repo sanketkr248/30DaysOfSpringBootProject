@@ -8,8 +8,11 @@ import java.util.Map;
 
 import org.springframework.stereotype.Service;
 
-import com.sanket.user_registration.dto.UserRequestDto;
-import com.sanket.user_registration.dto.UserResponseDto;
+import com.sanket.user_registration.dto.UserProfileDto;
+import com.sanket.user_registration.dto.request.LoginRequestDto;
+import com.sanket.user_registration.dto.request.UserRequestDto;
+import com.sanket.user_registration.dto.response.LoginResponseDto;
+import com.sanket.user_registration.dto.response.UserResponseDto;
 import com.sanket.user_registration.model.Users;
 
 
@@ -61,6 +64,18 @@ public class UserService implements UserServiceInterface{
 	        responseList.add(response);
 	    }
 	    return responseList;
+	}
+
+	@Override
+	public LoginResponseDto login(LoginRequestDto request) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public UserProfileDto getUserProfile(Long id) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

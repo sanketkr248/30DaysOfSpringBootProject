@@ -1,4 +1,4 @@
-package com.sanket.user_registration.dto;
+package com.sanket.user_registration.dto.response;
 
 public class UserResponseDto {
 

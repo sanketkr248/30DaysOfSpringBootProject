@@ -1,11 +1,9 @@
 package com.sanket.user_registration.dto;
 
-public class UserRequestDto {
-
+public class UserProfileDto {
 	private String name;
 	private String email;
-	private String password;
-	private String phoneNumber;
+	private String age;
 	private String address;
 	public String getName() {
 		return name;
@@ -19,17 +17,11 @@ public class UserRequestDto {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getPassword() {
-		return password;
+	public String getAge() {
+		return age;
 	}
-	public void setPassword(String password) {
-		this.password = password;
-	}
-	public String getPhoneNumber() {
-		return phoneNumber;
-	}
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
+	public void setAge(String age) {
+		this.age = age;
 	}
 	public String getAddress() {
 		return address;
@@ -37,5 +29,5 @@ public class UserRequestDto {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	
+
 }
