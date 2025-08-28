@@ -31,8 +31,9 @@ public class UserService implements UserServiceInterface{
 		user.setPhoneNumber(request.getPhoneNumber());
 		user.setEmail(request.getEmail());
 		user.setAddress(request.getAddress());
+		user.setAge(request.getAge());
 		users.put(user.getId(), user);
-		
+
 		UserResponseDto response = new UserResponseDto();
 		response.setId(user.getId());
 		response.setName(user.getName());
@@ -68,14 +69,35 @@ public class UserService implements UserServiceInterface{
 
 	@Override
 	public LoginResponseDto login(LoginRequestDto request) {
-		// TODO Auto-generated method stub
-		return null;
+		Users user = users.values().stream()
+							.filter(u -> u.getEmail().equals(request.getEmail()))
+							.findFirst()
+							.orElse(null);
+		
+		if (user == null || !user.getPassword().equals(request.getPassword())) {
+	        // You could also throw custom exception
+			 return null; 
+	    }
+		
+		LoginResponseDto response = new LoginResponseDto();
+		response.setUserId(String.valueOf(user.getId()));
+		response.setName(user.getName());
+		return response;
 	}
 
 	@Override
 	public UserProfileDto getUserProfile(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		Users user = users.get(id);
+		if(user == null)
+			return null;
+	
+		
+		UserProfileDto profile = new UserProfileDto();
+		profile.setName(user.getName());
+		profile.setEmail(user.getEmail());
+		profile.setAddress(user.getAddress());
+		profile.setAge(user.getAge());	
+		return profile;
 	}
 
 }

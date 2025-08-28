@@ -3,7 +3,7 @@ package com.sanket.user_registration.dto;
 public class UserProfileDto {
 	private String name;
 	private String email;
-	private String age;
+	private int age;
 	private String address;
 	public String getName() {
 		return name;
@@ -17,11 +17,11 @@ public class UserProfileDto {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getAge() {
+	public int getAge() {
 		return age;
 	}
-	public void setAge(String age) {
-		this.age = age;
+	public void setAge(int i) {
+		this.age = i;
 	}
 	public String getAddress() {
 		return address;

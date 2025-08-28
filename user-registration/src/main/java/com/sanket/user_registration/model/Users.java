@@ -9,6 +9,7 @@ public class Users {
 	@Id
 	private Long id;
 	private String name;
+	private int age;
 	private String password;
 	private String phoneNumber;
 	private String email;
@@ -49,6 +50,12 @@ public class Users {
 	}
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
 	}
 	
 }

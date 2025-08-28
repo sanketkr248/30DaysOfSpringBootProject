@@ -3,6 +3,7 @@ package com.sanket.user_registration.dto.request;
 public class UserRequestDto {
 
 	private String name;
+	private int age;
 	private String email;
 	private String password;
 	private String phoneNumber;
@@ -36,6 +37,12 @@ public class UserRequestDto {
 	}
 	public void setAddress(String address) {
 		this.address = address;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
 	}
 	
 }
