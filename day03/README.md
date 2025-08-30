@@ -1,4 +1,4 @@
-\# Day 3 - User Registration with Database \& Response Codes
+# Day 3 - User Registration with Database \& Response Codes
 
 
 
